@@ -8,7 +8,7 @@ from pprint import pprint
 """
 API Publica educ.ar
 
-Ejemplo de llamado a endpoint: Noticias Recientes
+Ejemplo de llamado a endpoint: Busqueda de Noticias
  
 """
 

@@ -9,7 +9,7 @@ $service_url = 'https://api.educ.ar/0.9/noticias/articulos/';
 $ssl_crt = getcwd().'/api_server.crt';
 $api_key = 'xxxxxxxxxxxxxxxxxxx';  //key
 
-$params = array('apikey'=>$api_key,
+$params = array('key'=>$api_key,
               'texto'=>'hackaton',
               'limit'=>1,
               'sort_mode'=>'asc');

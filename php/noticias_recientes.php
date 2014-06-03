@@ -6,9 +6,9 @@
  * 
  */
 $service_url = 'https://api.educ.ar/0.9/noticias/recientes/';  
-$api_key = 'xxxxxxxxxxxxxxxxxxx';  //key
+$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';  //key
 $ssl_crt = getcwd().'/api_server.crt';  //cert
-$params = array('apikey'=>$api_key);
+$params = array('key'=>$api_key);
 
 if (!function_exists('curl_version'))
     die ('Se necesita tener instalada la extensión cURL');
@@ -18,7 +18,7 @@ $curl = curl_init($service_url.'?'.http_build_query($params));
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 // Debug
-//curl_setopt($curl, CURLOPT_VERBOSE, true);
+curl_setopt($curl, CURLOPT_VERBOSE, true);
 
 curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,false);
 curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,true);

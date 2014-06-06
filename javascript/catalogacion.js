@@ -8,7 +8,7 @@ $( document ).ready(function() {
         url: "https://api.educ.ar/0.9/recursos/catalogacion",
         type: "GET",
         data: {
-            key: "0cd962859f73a0bfd5e432f0dca94f0a5d422791"
+            key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         },
         dataType: "json",
         success: mostrarResultados,

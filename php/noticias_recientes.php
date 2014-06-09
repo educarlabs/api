@@ -7,7 +7,6 @@
  */
 $service_url = 'https://api.educ.ar/0.9/noticias/recientes/';  
 $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';  //key
-$ssl_crt = getcwd().'/api_server.crt';  //cert
 $params = array('key'=>$api_key);
 
 if (!function_exists('curl_version'))
@@ -20,9 +19,8 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 // Debug
 curl_setopt($curl, CURLOPT_VERBOSE, true);
 
-curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,false);
+curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,true);
 curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,true);
-curl_setopt($curl,CURLOPT_CAINFO,$ssl_crt);
 
 $curl_response = curl_exec($curl);
 

@@ -25,9 +25,9 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 // Debug
 //curl_setopt($curl, CURLOPT_VERBOSE, true);
 
-curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,false);
+curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,true);
 curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,true);
-curl_setopt($curl,CURLOPT_CAINFO,$ssl_crt);
+
 
 $curl_response = curl_exec($curl);
 
